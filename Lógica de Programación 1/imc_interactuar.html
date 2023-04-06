@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+<html>
+<h1>PROGRAMA CALCULO IMC</h1>
+
+</html>
+
+<script>
+
+    function saltaLinea(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+        saltaLinea();
+    }
+
+    function calcularImc(peso,altura, nombre){
+
+        imc = peso / (altura * altura);
+        imprimir("El IMC calculado de " + nombre + " es de : " + imc);
+        return(imc);
+    }
+
+    function promImc(imc1,imc2){
+
+        promedio = (imc1 + imc2)/ 2
+        return(promedio);
+    }
+
+    nombreInformado = prompt("Informe su nombre")
+    pesoInformado = prompt(nombreInformado + "Informe su peso:")
+    alturaInformada = prompt(nombreInformado + "Informe su altura:")
+
+    imcCalculado = calcularImc(pesoInformado,alturaInformada);
+
+    imprimir(nombreInformado + " El IMC calculado Con valores por teclado es: " + imcCalculado);
+
+    var pesoCristian = 71
+    var alturaCristian = 1.72
+    // var imcCristian = pesoCristian / (alturaCristian * alturaCristian);
+    var imcC = calcularImc(pesoCristian, alturaCristian, "Cristian");
+
+    
+    var pesoMarcelo = 85
+    var alturaMarcelo = 1.77
+    var imcM = calcularImc(pesoMarcelo, alturaMarcelo, "Marcelo");
+
+    imprimir("El promedio de los IMC's calculados es: " + promImc(imcC, imcM));
+
+    
+</script>

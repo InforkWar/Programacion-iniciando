@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<h1>Creando Variables y haciendo cálculos.</h1>
+
+<script>
+
+// creo la función.
+    function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    var anho = 2023;  // Creo una variable
+    
+
+    document.write("<h2> Estamos en el año : " + anho + "</h2>");
+    saltarLinea();  // llamo a la función.
+
+     
+
+    document.write("Juan tiene: " + (anho - 2000) + " años");  // Variable sin comillas
+    saltarLinea();
+    document.write("Su año de nacimiento es: " + 2000);
+    saltarLinea();
+    
+    
+    document.write("Pedro tiene: " + (anho - 1995) + " años");
+    saltarLinea();
+    document.write("Su año de nacimiento es: " + 1995);
+    saltarLinea();
+    
+    var edadJuan = anho - 2000;
+    var edadPedro = anho - 1995;
+
+    var promedioH = (edadJuan + edadPedro)/2;
+
+    document.write("La edad promedio de los hombres es de: " + Math.round(promedioH));
+    saltarLinea();
+
+    anho = 2030
+    
+    document.write("<h2> Ahora estamos en el año: " + anho + "</h2>");
+    saltarLinea();
+    
+    document.write("Carlos tiene: " + (anho - 2005) + " años");
+    saltarLinea();
+    document.write("Su año de nacimiento es: " + 2005);
+    
+
+
+</script>
