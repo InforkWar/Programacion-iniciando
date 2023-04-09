@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+ 
+ <h1 style="font-family: 'Courier New', Courier, monospace;text-align: center;">PROGRAMA - CÁLCULOS DE AÑOS DE MUNDIAL.</h1>
+
+
+ <script>
+    function jump(){  
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+    }
+
+    var anhoMundial = 1930;
+    var limite = parseInt(prompt("Ingrese el año límite para calcular los años de mundiales:"));
+
+    while(anhoMundial <= limite){
+        imprimir("Hubo mundial de la FIFA en el año " + anhoMundial);
+        jump();
+        anhoMundial = anhoMundial + 4;
+    
+
+}
+    
+alert("Fin!!")
+
+
+
+
+ </script>

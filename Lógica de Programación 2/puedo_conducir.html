@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+ 
+ <h1 style="font-family: 'Courier New', Courier, monospace;text-align: center;">PROGRAMA - ¿PUEDO CONDUCIR?.</h1>
+
+
+ <script>
+    function jump(){  
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+    }
+
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    if (edad > 18){
+        imprimir("Puedes conducir");
+        jump();
+    }
+    else{
+        imprimir("No puedes conducir");
+        jump();
+    }
+
+</script>

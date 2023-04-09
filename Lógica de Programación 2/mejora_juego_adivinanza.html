@@ -1,0 +1,62 @@
+<head>
+<meta charset="UTF-8">
+<style>
+    .pinturita {
+      color: red;
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+  
+</head>
+
+
+ <h1 style="font-family: 'Courier New', Courier, monospace;text-align: center;">PROGRAMA - Lotería.</h1>
+
+
+ <script>
+    function jump(){  
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write('<div class="pinturita">' + mensaje + '</div>');
+    }
+
+    function loteria(){
+
+        return numeroMaquina = Math.round(Math.random() * 10);
+
+    }
+
+
+    var intentos = 3
+    var contador = 1
+    var n = loteria();
+
+   
+
+while(contador <= intentos){
+    var numeroElegido = parseInt(prompt("Intento " + contador + ": " + "Elija un número del uno al diez."));
+
+    if (n == numeroElegido) {
+        imprimir("Acertaste guachin! en el intento número: " + contador);
+        break;
+    }
+    else{
+        if (numeroElegido > n){
+            alert("ERROR, te pasaste wey >.<!");
+        }
+        if (numeroElegido < n){
+            alert("ERROR, Te quedaste corto");
+        }  
+    contador++;
+    }
+    }
+
+
+
+jump();
+imprimir("El número elegido por la máquina fue: " + n);
+</script>

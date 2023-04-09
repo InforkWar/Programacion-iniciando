@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+ 
+<body>
+
+    <h1 style="text-align: center;font-family: 'Courier New', Courier, monospace;">
+    PROGRAMA - IMPRIMIR LOS NÚMEROS PARES DEL 1 AL 100
+    </h1>
+ 
+</body>
+
+
+
+<script>
+    function jump(){
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function imprimir(mensaje){
+
+        document.write(mensaje);
+
+    }
+imprimir("Los números pares son:")
+jump();
+
+i=1
+while(i <= 100){
+    if(i % 2 == 0){
+        imprimir(i)
+        jump();
+        i++;
+    }
+    else {
+        i++;
+        continue};
+}
+
+imprimir("Fin del programa.")
+
+</script>

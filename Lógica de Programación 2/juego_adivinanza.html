@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+ 
+ <h1 style="font-family: 'Courier New', Courier, monospace;text-align: center;">PROGRAMA - Adivina el número.</h1>
+
+
+ <script>
+    function jump(){  
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+    }
+
+   var numeroPensado = Math.round(Math.random()*10);
+   var numeroLanzado = parseInt(prompt("Ingrese un número del 0 al 10"));
+
+   if (numeroPensado == numeroLanzado){
+    imprimir("acertaste perri!");
+   }
+
+   else{
+    imprimir("le erraste perro!, el número era: " + numeroPensado);
+   }
+
+
+
+
+ </script>

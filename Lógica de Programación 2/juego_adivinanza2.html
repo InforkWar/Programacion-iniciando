@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+ 
+ <h1 style="font-family: 'Courier New', Courier, monospace;text-align: center;">PROGRAMA - Lotería.</h1>
+
+
+ <script>
+    function jump(){  
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+    }
+
+    function loteria(){
+
+        return numeroMaquina = Math.round(Math.random() * 100);
+
+    }
+
+
+    var numeroElegido = parseInt(prompt("Elija un número."));
+
+    var n = loteria(numeroElegido);
+
+    if (n == numeroElegido) {
+        imprimir("Acertaste guachin!");
+    }
+    else{
+        if (numeroElegido > n){
+            imprimir("ERROR, te juiste pa rriba chango!");
+        }
+        if (numeroElegido < n){
+            imprimir("ERROR, Te juiste pa bajo changuito!");
+        }  
+    }
+
+jump();
+imprimir("El número elegido por la máquina fue: " + n);
+</script>

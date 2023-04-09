@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .pinturita {
+          color: red;
+          font-size: 20px;
+          text-align: center;
+        }
+      </style>
+      
+</head>
+ 
+<body style="background-color: #d1af52;">
+
+    <h1 style="text-align: center;font-family: 'Courier New', Courier, monospace;color: red;">
+    Juego de PIEDRA, PAPEL o TIJERAS.
+    </h1>
+ 
+</body>
+
+
+
+<script>
+    function jump(){
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function imprimir(mensaje){
+
+        document.write('<div class="pinturita">' + mensaje + '</div>');
+
+    }
+
+    const opciones = ['piedra', 'papel', 'tijera'];
+    var puntuacion_npc = 0;
+    var puntuacion_usuario = 0;
+
+    var intento = 1;
+
+    while (intento <= 3){
+        intento++;
+        let variableAleatoria = opciones[Math.floor(Math.random() * opciones.length)];
+        var eleccionUsuario = prompt("Elije piedra, papel o tijera.");
+        
+        if (variableAleatoria == eleccionUsuario){
+            puntuacion_usuario++;
+            
+        }
+        else{
+            puntuacion_npc++;
+            
+        }
+
+    }
+
+    imprimir('El puntaje del usuario es de: ' + puntuacion_usuario);
+    imprimir('El puntaje de la máquina es de: ' + puntuacion_npc);
+
+    if (puntuacion_usuario > puntuacion_npc){
+        imprimir('Has ganado!.')
+    }
+    else if(puntuacion_usuario < puntuacion_npc){
+        imprimir('Has perdido!')
+    }
+    else{
+        imprimir('Se produjo un empate.')
+    }
+</script>

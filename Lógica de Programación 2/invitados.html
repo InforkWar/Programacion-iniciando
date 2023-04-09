@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+ <h1 style="font-family: 'Courier New', Courier, monospace;text-align: center;">PROGRAMA - CALCULAR EL TOTAL DE INVITADOS.</h1>
+
+
+ <script>
+    function jump(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+    }
+
+    imprimir("La cantidad de invitados es: " + (invitados = parseInt(prompt("Ingrese la cantidad de invitados:"))));
+    jump();
+    imprimir("La cantidad de VIPS es: " + (vips = parseInt(prompt("Ingrese la cantidad de VIPS:"))));
+    jump();
+
+    imprimir("El total de invitados es: " + (invitados+vips));
+    jump();
+
+
+
+ </script>

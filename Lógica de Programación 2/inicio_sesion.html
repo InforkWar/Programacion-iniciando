@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .mensaje {
+          color: red;
+          font-size: 20px;
+        }
+      </style>
+      
+</head>
+ 
+<body style="background-color: #756b6b;">
+
+    <h1 style="text-align: center;font-family: 'Courier New', Courier, monospace;">
+    Felicitaciones por pasar el inicio de sensión :D!
+    </h1>
+    <p style="text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+        El inicio de sensión te da la posibilidad de equivocarte 3 veces.
+    </p>
+ 
+</body>
+
+
+
+<script>
+    function jump(){
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function imprimir(mensaje){
+
+        document.write('<div class="pinturita">' + mensaje + '</div>');
+
+    }
+
+    var usuarioRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+    var fallos = 0;
+    
+    
+
+    for (var intentos = 1; intentos <= 3; intentos++){
+        var usuarioIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        
+    if( usuarioRegistrado == usuarioIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+        alert("Bienvenido al sistema " + usuarioIngresado);
+        break;
+    } 
+    
+    else {
+        alert("inicio de sesión inválido. Favor intente de nuevo");
+        fallos++;
+    }
+
+    if (fallos == 3){
+        alert("Se ha equivocado demasiadas veces. Comuniquese con el administrador.")
+    }
+
+}
+</script>

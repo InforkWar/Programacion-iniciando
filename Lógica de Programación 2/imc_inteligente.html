@@ -1,0 +1,79 @@
+<meta charset="UTF-8">
+
+ 
+ <h1 style="font-family: 'Courier New', Courier, monospace;text-align: center;">PROGRAMA - CALCULAR LOS PUNTOS DE UN EQUIPO DE FUTBOL.</h1>
+
+
+ <script>
+    function jump(){  
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+    }
+
+    function calcularImc(peso, altura) {
+
+        return(peso / (altura * altura));
+
+    }
+
+var nombre = prompt("Informe su nombre.");
+var peso = prompt(nombre + ", Informe su peso.");
+var altura = prompt(nombre + ", Informe su altura.");
+
+var imc = calcularImc(peso, altura);
+
+imprimir(nombre + ", su imc calculado es de: " + imc);
+jump();
+
+    if (imc < 18.5){
+        imprimir("Segun la OMS estas: Bajo Peso");
+        jump();
+        imprimir("Porque no te vas un par de semanas al McDonald? :o");
+    }
+    
+    if (imc > 18.5 && imc < 24.9){
+        imprimir("Segun la OMS estas: Adecuado");
+        jump();
+        imprimir("Como hiciste?... tanta presición vas a tener man? -.-");
+        jump();
+        setTimeout(function(){
+        alert("-.-");
+        jump();
+        alert("-.-");
+        jump();
+        alert("-.-");
+        jump();
+        alert("-.0");
+        jump();
+        alert("0.-");
+        jump();
+        alert("o.o");
+        jump();
+        alert("-.0");
+        jump();
+        alert("0.-");
+        alert("Que haces todavía acá??? JAJAJAJAJ");
+        alert("Te sarpas! JAJAJAJA");
+        alert("BUE ME FUÍ BYE!")    
+    },
+        4000);
+                            
+    }
+
+    if (imc > 25.0 && imc < 29.9){
+        imprimir("Segun la OMS estas: Sobre Peso");
+        jump();
+        imprimir("Bueno.. Le podés ir aflojando a las galletitas dulces y a los paty no? >.>");
+    }
+
+    if (imc > 30.0){
+        imprimir("Segun la OMS estas: Obeso");
+        jump();
+        imprimir("Ouch >.<");
+    }
+
+ </script>

@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .pinturita {
+          color: red;
+          font-size: 20px;
+          text-align: left;
+        }
+      </style>
+      
+    </head>
+    
+    
+     <h1 style="font-family: 'Courier New', Courier, monospace;text-align: center;">PROGRAMA - Lotería.</h1>
+    
+    
+     <script>
+        function jump(){  
+            document.write("<br>");
+            document.write("<br>");
+        }
+    
+        function imprimir(mensaje){
+            document.write('<div class="pinturita">' + mensaje + '</div>');
+        }
+    
+       
+        for (var lineas=1; lineas <= 3; lineas++){
+            
+            for(var columnas = 1; columnas <= 10; columnas++){
+            document.write("*");
+            }
+            jump();
+        }
+    
+    
+        
+    </script>

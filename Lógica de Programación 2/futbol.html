@@ -1,0 +1,35 @@
+<!-- 
+    Calculará las puntuaciones de un equipo
+    en una liga. Ganado 3 puntos y empatado
+    es un punto.
+ -->
+
+ <meta charset="UTF-8">
+
+ <h1 style="font-family: 'Courier New', Courier, monospace;text-align: center;">PROGRAMA - CALCULAR LOS PUNTOS DE UN EQUIPO DE FUTBOL.</h1>
+
+
+ <script>
+    function jump(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(mensaje){
+        document.write(mensaje);
+    }
+
+    var victorias = parseInt(prompt("Cuantas victorias tuvo su equipo:"));
+    var empates = parseInt(prompt("Cuantos empates tuvo su equipo:"));
+    imprimir("Las victorias fueron: " + victorias);
+    jump();
+    imprimir("Los empates fueron: " + empates);
+    jump();
+
+    puntosTotal = victorias * 3 + empates; 
+
+    imprimir("El total de puntos del equipo es de: " + puntosTotal);
+
+
+
+ </script>

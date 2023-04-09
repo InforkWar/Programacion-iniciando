@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .pinturita {
+          color: red;
+          font-size: 20px;
+        }
+      </style>
+      
+</head>
+ 
+<body style="margin:0">
+
+    <h1 style="text-align: center;font-family: 'Courier New', Courier, monospace;background-color: aquamarine;margin: 0;height: 60px;">
+        Exhibiendo en un alert el nombre digitado
+    </h1>
+<div style="text-align: center;background-color: blueviolet;height: 80px;display: flex;align-items: center;justify-content: center;flex-direction: column;">
+    
+    <input style="text-align: center;"/><br>
+    <button>Imprimir Entrada</button>
+    <button id="button2">Clear</button>
+</div>
+<div style="background-color: grey;display: flex;height: 80px;justify-content: center;align-items: center;">
+    <p id="idParrafo1" style="font-family: 'Courier New', Courier, monospace;font-size: 40px">
+        Nota 1 : 
+    </p>
+
+</div>
+
+<div style="background-color: rgb(160, 8, 8);display: flex;height: 80px;justify-content: center;align-items: center;">
+    <p id="idParrafo2" style="font-family: 'Courier New', Courier, monospace;font-size: 40px">
+        Nota 2 : 
+    </p>
+
+</div>
+
+
+<div style="background-color: rgb(36, 116, 161);display: flex;height: 80px;justify-content: center;align-items: center;">
+    <p id="idParrafo3" style="font-family: 'Courier New', Courier, monospace;font-size: 40px">
+        Nota 3 : 
+    </p>
+
+</div>
+
+
+</body>
+
+
+
+<script>
+    var inputObjeto = document.querySelector("input"); //seleccionar el objeto que hare focu
+    inputObjeto.focus();  // le hago foco al elemento seleccionado antes.
+
+    function jump(){
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function imprimir(){
+        var entrada = document.querySelector("input").value;  //aca guardo el contenido del objeto
+        var mensaje = document.getElementById("idParrafo1");  //guardo en mensaje la direccion a la que me lleva el id
+        mensaje.innerHTML = mensaje.innerHTML + "" + entrada;
+        var inputObjeto = document.querySelector("input");   // aca solo guardo en input el objeto como tal q reseteare.
+        inputObjeto.value = "";
+        inputObjeto.focus();
+    }
+
+    function limpiar(){
+        var nota1 = document.getElementById("idParrafo1");
+        nota1.innerHTML = "Nota 1 : ";
+    }
+    
+    
+    var boton = document.querySelector("button");
+    boton.onclick = imprimir;
+
+var boton2 = document.getElementById("button2");
+    boton2.onclick = limpiar;
+    
+
+</script>
